@@ -1,0 +1,168 @@
+[2022-05-29 11:32:07,363] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: Gamer_Daily_Request.get_lottery scheduled__2022-05-28T03:31:50.187592+00:00 [queued]>
+[2022-05-29 11:32:07,385] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: Gamer_Daily_Request.get_lottery scheduled__2022-05-28T03:31:50.187592+00:00 [queued]>
+[2022-05-29 11:32:07,385] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-29 11:32:07,386] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-05-29 11:32:07,386] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-29 11:32:07,418] {taskinstance.py:1378} INFO - Executing <Task(_PythonDecoratedOperator): get_lottery> on 2022-05-28 03:31:50.187592+00:00
+[2022-05-29 11:32:07,423] {standard_task_runner.py:52} INFO - Started process 46753 to run task
+[2022-05-29 11:32:07,440] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'Gamer_Daily_Request', 'get_lottery', 'scheduled__2022-05-28T03:31:50.187592+00:00', '--job-id', '109', '--raw', '--subdir', 'DAGS_FOLDER/gamer_dag.py', '--cfg-path', '/var/folders/7p/8y53sxp17879s6k6nzygbwgw0000gn/T/tmpmy2u6exr', '--error-file', '/var/folders/7p/8y53sxp17879s6k6nzygbwgw0000gn/T/tmpl2tcttia']
+[2022-05-29 11:32:07,446] {standard_task_runner.py:80} INFO - Job 109: Subtask get_lottery
+[2022-05-29 11:32:07,587] {task_command.py:370} INFO - Running <TaskInstance: Gamer_Daily_Request.get_lottery scheduled__2022-05-28T03:31:50.187592+00:00 [running]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2022-05-29 11:32:07,741] {taskinstance.py:1570} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=b01201008@gmail.com
+AIRFLOW_CTX_DAG_OWNER=randy
+AIRFLOW_CTX_DAG_ID=Gamer_Daily_Request
+AIRFLOW_CTX_TASK_ID=get_lottery
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-28T03:31:50.187592+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-05-28T03:31:50.187592+00:00
+[2022-05-29 11:32:07,745] {logging_mixin.py:115} INFO - get_lottery
+[2022-05-29 11:32:30,442] {logging_mixin.py:115} INFO - Message: no such element: Unable to locate element: {"method":"css selector","selector":"div[class*='rewardDialogueWrapper']:not([style*='display']) div.rewardResumebutton"}
+  (Session info: chrome=102.0.5005.61)
+Stacktrace:
+0   chromedriver                        0x000000010a8b7d19 chromedriver + 5197081
+1   chromedriver                        0x000000010a845b23 chromedriver + 4729635
+2   chromedriver                        0x000000010a4232b8 chromedriver + 393912
+3   chromedriver                        0x000000010a4582fd chromedriver + 611069
+4   chromedriver                        0x000000010a458581 chromedriver + 611713
+5   chromedriver                        0x000000010a48a5a4 chromedriver + 816548
+6   chromedriver                        0x000000010a47582d chromedriver + 731181
+7   chromedriver                        0x000000010a4882a1 chromedriver + 807585
+8   chromedriver                        0x000000010a4756f3 chromedriver + 730867
+9   chromedriver                        0x000000010a44ba49 chromedriver + 559689
+10  chromedriver                        0x000000010a44ca75 chromedriver + 563829
+11  chromedriver                        0x000000010a889bdd chromedriver + 5008349
+12  chromedriver                        0x000000010a88eb64 chromedriver + 5028708
+13  chromedriver                        0x000000010a893bcf chromedriver + 5049295
+14  chromedriver                        0x000000010a88f7ca chromedriver + 5031882
+15  chromedriver                        0x000000010a86959f chromedriver + 4875679
+16  chromedriver                        0x000000010a8a9388 chromedriver + 5137288
+17  chromedriver                        0x000000010a8a950f chromedriver + 5137679
+18  chromedriver                        0x000000010a8bf085 chromedriver + 5226629
+19  libsystem_pthread.dylib             0x00007ff819e344e1 _pthread_start + 125
+20  libsystem_pthread.dylib             0x00007ff819e2ff6b thread_start + 15
+[2022-05-29 11:32:30,444] {logging_mixin.py:115} INFO - fail to click div[class*='rewardDialogueWrapper']:not([style*='display']) div.rewardResumebutton
+[2022-05-29 11:49:39,100] {local_task_job.py:144} ERROR - Heartbeat time limit exceeded!
+[2022-05-29 11:49:39,139] {process_utils.py:125} INFO - Sending Signals.SIGTERM to group 46753. PIDs of all processes in the group: [46755, 46756, 46765, 46766, 46767, 46769, 46774, 46776, 46777, 46778, 46753]
+[2022-05-29 11:49:39,140] {process_utils.py:80} INFO - Sending the signal Signals.SIGTERM to group 46753
+[2022-05-29 11:49:39,140] {taskinstance.py:1542} ERROR - Received SIGTERM. Terminating subprocesses.
+[2022-05-29 11:49:39,191] {taskinstance.py:1890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/decorators/base.py", line 179, in execute
+    return_value = super().execute(context)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/Users/user/flow-for-randy/dags/gamer_dag.py", line 31, in get_lottery
+    gamer_service.get_lotteries()
+  File "/Users/user/flow-for-randy/dags/services/gamer.py", line 74, in get_lotteries
+    self.get_lottery(lottery_page)
+  File "/Users/user/flow-for-randy/dags/services/gamer.py", line 66, in get_lottery
+    self.watch_ad()
+  File "/Users/user/flow-for-randy/dags/services/gamer.py", line 58, in watch_ad
+    self.browser.wait(ad_time)
+  File "/Users/user/flow-for-randy/dags/services/drivers/selenium_driver.py", line 42, in wait
+    time.sleep(seconds)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1544, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2022-05-29 11:49:39,214] {taskinstance.py:1396} INFO - Marking task as FAILED. dag_id=Gamer_Daily_Request, task_id=get_lottery, execution_date=20220528T033150, start_date=20220529T033207, end_date=20220529T034939
+[2022-05-29 11:49:39,251] {process_utils.py:75} INFO - Process psutil.Process(pid=46774, status='terminated', started='11:32:11') (46774) terminated with exit code None
+[2022-05-29 11:49:39,257] {logging_mixin.py:115} WARNING - /Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/utils/email.py:119 PendingDeprecationWarning: Fetching SMTP credentials from configuration variables will be deprecated in a future release. Please set credentials using a connection instead.
+[2022-05-29 11:49:39,258] {configuration.py:549} WARNING - section/key [smtp/smtp_user] not found in config
+[2022-05-29 11:49:39,258] {email.py:228} INFO - Email alerting: attempt 1
+[2022-05-29 11:49:39,263] {configuration.py:549} WARNING - section/key [smtp/smtp_user] not found in config
+[2022-05-29 11:49:39,264] {email.py:228} INFO - Email alerting: attempt 1
+[2022-05-29 11:49:39,265] {taskinstance.py:1945} ERROR - Failed to send email to: ['b01201008@gmail.com']
+Traceback (most recent call last):
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1452, in _run_raw_task
+    self._execute_task_with_callbacks(context, test_mode)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1599, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1660, in _execute_task
+    result = execute_callable(context=context)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/decorators/base.py", line 179, in execute
+    return_value = super().execute(context)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/Users/user/flow-for-randy/dags/gamer_dag.py", line 31, in get_lottery
+    gamer_service.get_lotteries()
+  File "/Users/user/flow-for-randy/dags/services/gamer.py", line 74, in get_lotteries
+    self.get_lottery(lottery_page)
+  File "/Users/user/flow-for-randy/dags/services/gamer.py", line 66, in get_lottery
+    self.watch_ad()
+  File "/Users/user/flow-for-randy/dags/services/gamer.py", line 58, in watch_ad
+    self.browser.wait(ad_time)
+  File "/Users/user/flow-for-randy/dags/services/drivers/selenium_driver.py", line 42, in wait
+    time.sleep(seconds)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1544, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 2329, in email_alert
+    send_email(task.email, subject, html_content)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/utils/email.py", line 58, in send_email
+    return backend(
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/utils/email.py", line 119, in send_email_smtp
+    send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/utils/email.py", line 230, in send_mime_email
+    smtp_conn = _get_smtp_connection(smtp_host, smtp_port, smtp_timeout, smtp_ssl)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/utils/email.py", line 264, in _get_smtp_connection
+    else smtplib.SMTP(host=host, port=port, timeout=timeout)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/smtplib.py", line 255, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/smtplib.py", line 339, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/smtplib.py", line 310, in _get_socket
+    return socket.create_connection((host, port), timeout,
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/socket.py", line 808, in create_connection
+    raise err
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1943, in handle_failure
+    self.email_alert(error, task)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 2331, in email_alert
+    send_email(task.email, subject, html_content_err)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/utils/email.py", line 58, in send_email
+    return backend(
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/utils/email.py", line 119, in send_email_smtp
+    send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/utils/email.py", line 230, in send_mime_email
+    smtp_conn = _get_smtp_connection(smtp_host, smtp_port, smtp_timeout, smtp_ssl)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/utils/email.py", line 264, in _get_smtp_connection
+    else smtplib.SMTP(host=host, port=port, timeout=timeout)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/smtplib.py", line 255, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/smtplib.py", line 339, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/smtplib.py", line 310, in _get_socket
+    return socket.create_connection((host, port), timeout,
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/socket.py", line 808, in create_connection
+    raise err
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+[2022-05-29 11:49:39,278] {standard_task_runner.py:92} ERROR - Failed to execute job 109 for task get_lottery (Task received SIGTERM signal; 46753)
+[2022-05-29 11:49:39,310] {process_utils.py:75} INFO - Process psutil.Process(pid=46755, status='terminated', started='11:32:07') (46755) terminated with exit code None
+[2022-05-29 11:49:39,334] {process_utils.py:75} INFO - Process psutil.Process(pid=46753, status='terminated', exitcode=1, started='11:32:07') (46753) terminated with exit code 1
+[2022-05-29 11:49:39,355] {process_utils.py:75} INFO - Process psutil.Process(pid=46766, status='terminated', started='11:32:09') (46766) terminated with exit code None
+[2022-05-29 11:49:39,374] {process_utils.py:75} INFO - Process psutil.Process(pid=46777, status='terminated', started='11:32:26') (46777) terminated with exit code None
+[2022-05-29 11:49:39,374] {process_utils.py:75} INFO - Process psutil.Process(pid=46767, status='terminated', started='11:32:09') (46767) terminated with exit code None
+[2022-05-29 11:49:39,395] {process_utils.py:75} INFO - Process psutil.Process(pid=46776, status='terminated', started='11:32:24') (46776) terminated with exit code None
+[2022-05-29 11:49:39,415] {process_utils.py:75} INFO - Process psutil.Process(pid=46769, status='terminated', started='11:32:09') (46769) terminated with exit code None
+[2022-05-29 11:49:39,516] {process_utils.py:75} INFO - Process psutil.Process(pid=46756, status='terminated', started='11:32:08') (46756) terminated with exit code None
+[2022-05-29 11:49:39,517] {process_utils.py:75} INFO - Process psutil.Process(pid=46765, status='terminated', started='11:32:09') (46765) terminated with exit code None
+[2022-05-29 11:49:39,517] {process_utils.py:75} INFO - Process psutil.Process(pid=46778, status='terminated', started='11:32:27') (46778) terminated with exit code None

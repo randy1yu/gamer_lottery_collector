@@ -1,0 +1,10 @@
+## config
+conf/config.json
+
+## python environment
+.python-version
+
+## airflow
+airflow.db
+airflow-webserver.pid
+

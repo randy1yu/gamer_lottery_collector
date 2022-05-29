@@ -1,0 +1,25 @@
+[2022-05-28 16:20:52,385] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: Gamer_Daily_Request.login manual__2022-05-28T08:20:49.741491+00:00 [queued]>
+[2022-05-28 16:20:52,391] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: Gamer_Daily_Request.login manual__2022-05-28T08:20:49.741491+00:00 [queued]>
+[2022-05-28 16:20:52,391] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-28 16:20:52,391] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-05-28 16:20:52,391] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-28 16:20:52,400] {taskinstance.py:1378} INFO - Executing <Task(_PythonDecoratedOperator): login> on 2022-05-28 08:20:49.741491+00:00
+[2022-05-28 16:20:52,402] {standard_task_runner.py:52} INFO - Started process 35496 to run task
+[2022-05-28 16:20:52,407] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'Gamer_Daily_Request', 'login', 'manual__2022-05-28T08:20:49.741491+00:00', '--job-id', '75', '--raw', '--subdir', 'DAGS_FOLDER/gamer_dag.py', '--cfg-path', '/var/folders/7p/8y53sxp17879s6k6nzygbwgw0000gn/T/tmpet2md4dp', '--error-file', '/var/folders/7p/8y53sxp17879s6k6nzygbwgw0000gn/T/tmprbzltkwa']
+[2022-05-28 16:20:52,409] {standard_task_runner.py:80} INFO - Job 75: Subtask login
+[2022-05-28 16:20:52,449] {task_command.py:370} INFO - Running <TaskInstance: Gamer_Daily_Request.login manual__2022-05-28T08:20:49.741491+00:00 [running]> on host userdeMacBook-Pro.local
+[2022-05-28 16:20:52,490] {taskinstance.py:1570} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=b01201008@gmail.com
+AIRFLOW_CTX_DAG_OWNER=randy
+AIRFLOW_CTX_DAG_ID=Gamer_Daily_Request
+AIRFLOW_CTX_TASK_ID=login
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-28T08:20:49.741491+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-05-28T08:20:49.741491+00:00
+[2022-05-28 16:20:52,490] {logging_mixin.py:115} INFO - login
+[2022-05-28 16:20:58,664] {python.py:173} INFO - Done. Returned value was: None
+[2022-05-28 16:20:58,673] {taskinstance.py:1396} INFO - Marking task as SUCCESS. dag_id=Gamer_Daily_Request, task_id=login, execution_date=20220528T082049, start_date=20220528T082052, end_date=20220528T082058
+[2022-05-28 16:20:58,722] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-05-28 16:20:58,739] {local_task_job.py:273} INFO - 2 downstream tasks scheduled from follow-on schedule check

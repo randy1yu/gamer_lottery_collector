@@ -1,0 +1,25 @@
+[2022-05-28 13:36:28,764] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: Gamer_Daily_Request.get_lottery manual__2022-05-28T05:36:21.106383+00:00 [queued]>
+[2022-05-28 13:36:28,770] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: Gamer_Daily_Request.get_lottery manual__2022-05-28T05:36:21.106383+00:00 [queued]>
+[2022-05-28 13:36:28,770] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-28 13:36:28,771] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-05-28 13:36:28,771] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-28 13:36:28,780] {taskinstance.py:1378} INFO - Executing <Task(_PythonDecoratedOperator): get_lottery> on 2022-05-28 05:36:21.106383+00:00
+[2022-05-28 13:36:28,782] {standard_task_runner.py:52} INFO - Started process 21097 to run task
+[2022-05-28 13:36:28,787] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'Gamer_Daily_Request', 'get_lottery', 'manual__2022-05-28T05:36:21.106383+00:00', '--job-id', '21', '--raw', '--subdir', 'DAGS_FOLDER/gamer_dag.py', '--cfg-path', '/var/folders/7p/8y53sxp17879s6k6nzygbwgw0000gn/T/tmp7mejkvt8', '--error-file', '/var/folders/7p/8y53sxp17879s6k6nzygbwgw0000gn/T/tmpwfir889s']
+[2022-05-28 13:36:28,788] {standard_task_runner.py:80} INFO - Job 21: Subtask get_lottery
+[2022-05-28 13:36:28,829] {task_command.py:370} INFO - Running <TaskInstance: Gamer_Daily_Request.get_lottery manual__2022-05-28T05:36:21.106383+00:00 [running]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2022-05-28 13:36:28,870] {taskinstance.py:1570} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=b01201008@gmail.com
+AIRFLOW_CTX_DAG_OWNER=randy
+AIRFLOW_CTX_DAG_ID=Gamer_Daily_Request
+AIRFLOW_CTX_TASK_ID=get_lottery
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-28T05:36:21.106383+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-05-28T05:36:21.106383+00:00
+[2022-05-28 13:36:28,871] {logging_mixin.py:115} INFO - get_lottery
+[2022-05-28 13:36:28,872] {python.py:173} INFO - Done. Returned value was: None
+[2022-05-28 13:36:28,877] {taskinstance.py:1396} INFO - Marking task as SUCCESS. dag_id=Gamer_Daily_Request, task_id=get_lottery, execution_date=20220528T053621, start_date=20220528T053628, end_date=20220528T053628
+[2022-05-28 13:36:28,888] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-05-28 13:36:28,907] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

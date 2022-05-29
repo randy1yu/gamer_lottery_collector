@@ -1,0 +1,28 @@
+[2022-05-28 14:24:48,798] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: Gamer_Daily_Request.get_lottery manual__2022-05-28T06:24:39.963473+00:00 [queued]>
+[2022-05-28 14:24:48,812] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: Gamer_Daily_Request.get_lottery manual__2022-05-28T06:24:39.963473+00:00 [queued]>
+[2022-05-28 14:24:48,842] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-28 14:24:48,842] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-05-28 14:24:48,843] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-28 14:24:48,884] {taskinstance.py:1378} INFO - Executing <Task(_PythonDecoratedOperator): get_lottery> on 2022-05-28 06:24:39.963473+00:00
+[2022-05-28 14:24:48,886] {standard_task_runner.py:52} INFO - Started process 25370 to run task
+[2022-05-28 14:24:48,892] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'Gamer_Daily_Request', 'get_lottery', 'manual__2022-05-28T06:24:39.963473+00:00', '--job-id', '36', '--raw', '--subdir', 'DAGS_FOLDER/gamer_dag.py', '--cfg-path', '/var/folders/7p/8y53sxp17879s6k6nzygbwgw0000gn/T/tmpddalb4l7', '--error-file', '/var/folders/7p/8y53sxp17879s6k6nzygbwgw0000gn/T/tmpj6b118rw']
+[2022-05-28 14:24:48,904] {standard_task_runner.py:80} INFO - Job 36: Subtask get_lottery
+[2022-05-28 14:24:48,956] {task_command.py:370} INFO - Running <TaskInstance: Gamer_Daily_Request.get_lottery manual__2022-05-28T06:24:39.963473+00:00 [running]> on host userdeMacBook-Pro.local
+[2022-05-28 14:24:49,003] {taskinstance.py:1570} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=b01201008@gmail.com
+AIRFLOW_CTX_DAG_OWNER=randy
+AIRFLOW_CTX_DAG_ID=Gamer_Daily_Request
+AIRFLOW_CTX_TASK_ID=get_lottery
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-28T06:24:39.963473+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-05-28T06:24:39.963473+00:00
+[2022-05-28 14:24:49,004] {logging_mixin.py:115} INFO - get_lottery
+[2022-05-28 14:24:49,009] {logging_mixin.py:115} INFO - ======= cookies ======
+[2022-05-28 14:24:49,009] {logging_mixin.py:115} INFO - [{'domain': '.gamer.com.tw', 'expiry': 1716791085, 'httpOnly': False, 'name': '_ga', 'path': '/', 'secure': False, 'value': 'GA1.1.1537146562.1653719085'}, {'domain': '.gamer.com.tw', 'expiry': 1653719145, 'httpOnly': False, 'name': '_gat', 'path': '/', 'secure': False, 'value': '1'}, {'domain': '.gamer.com.tw', 'expiry': 1716791085, 'httpOnly': False, 'name': '_ga_2Q21791Y9D', 'path': '/', 'secure': False, 'value': 'GS1.1.1653719085.1.0.1653719085.60'}, {'domain': '.gamer.com.tw', 'expiry': 1653805485, 'httpOnly': False, 'name': '_gid', 'path': '/', 'secure': False, 'value': 'GA1.3.662226618.1653719085'}]
+[2022-05-28 14:24:49,009] {logging_mixin.py:115} INFO - ============================================================
+[2022-05-28 14:25:09,946] {python.py:173} INFO - Done. Returned value was: None
+[2022-05-28 14:25:09,957] {taskinstance.py:1396} INFO - Marking task as SUCCESS. dag_id=Gamer_Daily_Request, task_id=get_lottery, execution_date=20220528T062439, start_date=20220528T062448, end_date=20220528T062509
+[2022-05-28 14:25:09,971] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-05-28 14:25:09,985] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

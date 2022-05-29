@@ -1,0 +1,243 @@
+[2022-05-28 16:44:50,937] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: Gamer_Daily_Request.get_lottery manual__2022-05-28T08:44:38.824499+00:00 [queued]>
+[2022-05-28 16:44:50,942] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: Gamer_Daily_Request.get_lottery manual__2022-05-28T08:44:38.824499+00:00 [queued]>
+[2022-05-28 16:44:50,942] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-28 16:44:50,942] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-05-28 16:44:50,942] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-28 16:44:50,951] {taskinstance.py:1378} INFO - Executing <Task(_PythonDecoratedOperator): get_lottery> on 2022-05-28 08:44:38.824499+00:00
+[2022-05-28 16:44:50,953] {standard_task_runner.py:52} INFO - Started process 37623 to run task
+[2022-05-28 16:44:50,958] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'Gamer_Daily_Request', 'get_lottery', 'manual__2022-05-28T08:44:38.824499+00:00', '--job-id', '97', '--raw', '--subdir', 'DAGS_FOLDER/gamer_dag.py', '--cfg-path', '/var/folders/7p/8y53sxp17879s6k6nzygbwgw0000gn/T/tmpuvig57_h', '--error-file', '/var/folders/7p/8y53sxp17879s6k6nzygbwgw0000gn/T/tmpbsu1mhjw']
+[2022-05-28 16:44:50,959] {standard_task_runner.py:80} INFO - Job 97: Subtask get_lottery
+[2022-05-28 16:44:50,996] {task_command.py:370} INFO - Running <TaskInstance: Gamer_Daily_Request.get_lottery manual__2022-05-28T08:44:38.824499+00:00 [running]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2022-05-28 16:44:51,036] {taskinstance.py:1570} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=b01201008@gmail.com
+AIRFLOW_CTX_DAG_OWNER=randy
+AIRFLOW_CTX_DAG_ID=Gamer_Daily_Request
+AIRFLOW_CTX_TASK_ID=get_lottery
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-28T08:44:38.824499+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-05-28T08:44:38.824499+00:00
+[2022-05-28 16:44:51,037] {logging_mixin.py:115} INFO - get_lottery
+[2022-05-28 16:45:02,111] {logging_mixin.py:115} INFO - Message: element not interactable
+  (Session info: chrome=102.0.5005.61)
+Stacktrace:
+0   chromedriver                        0x0000000107643d19 chromedriver + 5197081
+1   chromedriver                        0x00000001075d1b23 chromedriver + 4729635
+2   chromedriver                        0x00000001071af16f chromedriver + 393583
+3   chromedriver                        0x00000001071e5477 chromedriver + 615543
+4   chromedriver                        0x00000001071d9689 chromedriver + 566921
+5   chromedriver                        0x0000000107201802 chromedriver + 731138
+6   chromedriver                        0x00000001071d8f45 chromedriver + 565061
+7   chromedriver                        0x000000010720190e chromedriver + 731406
+8   chromedriver                        0x00000001072142a1 chromedriver + 807585
+9   chromedriver                        0x00000001072016f3 chromedriver + 730867
+10  chromedriver                        0x00000001071d7a49 chromedriver + 559689
+11  chromedriver                        0x00000001071d8a75 chromedriver + 563829
+12  chromedriver                        0x0000000107615bdd chromedriver + 5008349
+13  chromedriver                        0x000000010761ab64 chromedriver + 5028708
+14  chromedriver                        0x000000010761fbcf chromedriver + 5049295
+15  chromedriver                        0x000000010761b7ca chromedriver + 5031882
+16  chromedriver                        0x00000001075f559f chromedriver + 4875679
+17  chromedriver                        0x0000000107635388 chromedriver + 5137288
+18  chromedriver                        0x000000010763550f chromedriver + 5137679
+19  chromedriver                        0x000000010764b085 chromedriver + 5226629
+20  libsystem_pthread.dylib             0x00007ff819e344e1 _pthread_start + 125
+21  libsystem_pthread.dylib             0x00007ff819e2ff6b thread_start + 15
+[2022-05-28 16:45:02,111] {logging_mixin.py:115} INFO - fail to click div.rewardResumebutton:not([style*=display]
+[2022-05-28 16:45:32,122] {taskinstance.py:1890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/decorators/base.py", line 179, in execute
+    return_value = super().execute(context)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/Users/user/flow-for-randy/dags/gamer_dag.py", line 32, in get_lottery
+    gamer_service.get_lotteries()
+  File "/Users/user/flow-for-randy/dags/services/gamer.py", line 74, in get_lotteries
+    self.get_lottery(lottery_page)
+  File "/Users/user/flow-for-randy/dags/services/gamer.py", line 66, in get_lottery
+    self.watch_ad()
+  File "/Users/user/flow-for-randy/dags/services/gamer.py", line 59, in watch_ad
+    self.browser.click(GamerElement.close_button)
+  File "/Users/user/flow-for-randy/dags/services/drivers/selenium_driver.py", line 32, in click
+    self.find_element(el).click()
+  File "/Users/user/flow-for-randy/dags/services/drivers/selenium_driver.py", line 26, in find_element
+    return self.driver.find_element(By.CSS_SELECTOR, el.value)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 1251, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 430, in execute
+    self.error_handler.check_response(response)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/selenium/webdriver/remote/errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: chrome not reachable
+  (Session info: chrome=102.0.5005.61)
+Stacktrace:
+0   chromedriver                        0x0000000107643d19 chromedriver + 5197081
+1   chromedriver                        0x00000001075d1b23 chromedriver + 4729635
+2   chromedriver                        0x00000001071af16f chromedriver + 393583
+3   chromedriver                        0x000000010719cf02 chromedriver + 319234
+4   chromedriver                        0x000000010719d8f2 chromedriver + 321778
+5   chromedriver                        0x000000010719f812 chromedriver + 329746
+6   chromedriver                        0x000000010719816c chromedriver + 299372
+7   chromedriver                        0x00000001071b0712 chromedriver + 399122
+8   chromedriver                        0x000000010721395b chromedriver + 805211
+9   chromedriver                        0x00000001072016f3 chromedriver + 730867
+10  chromedriver                        0x00000001071d7a49 chromedriver + 559689
+11  chromedriver                        0x00000001071d8a75 chromedriver + 563829
+12  chromedriver                        0x0000000107615bdd chromedriver + 5008349
+13  chromedriver                        0x000000010761ab64 chromedriver + 5028708
+14  chromedriver                        0x000000010761fbcf chromedriver + 5049295
+15  chromedriver                        0x000000010761b7ca chromedriver + 5031882
+16  chromedriver                        0x00000001075f559f chromedriver + 4875679
+17  chromedriver                        0x0000000107635388 chromedriver + 5137288
+18  chromedriver                        0x000000010763550f chromedriver + 5137679
+19  chromedriver                        0x000000010764b085 chromedriver + 5226629
+20  libsystem_pthread.dylib             0x00007ff819e344e1 _pthread_start + 125
+21  libsystem_pthread.dylib             0x00007ff819e2ff6b thread_start + 15
+
+[2022-05-28 16:45:32,134] {taskinstance.py:1396} INFO - Marking task as FAILED. dag_id=Gamer_Daily_Request, task_id=get_lottery, execution_date=20220528T084438, start_date=20220528T084450, end_date=20220528T084532
+[2022-05-28 16:45:32,162] {logging_mixin.py:115} WARNING - /Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/utils/email.py:119 PendingDeprecationWarning: Fetching SMTP credentials from configuration variables will be deprecated in a future release. Please set credentials using a connection instead.
+[2022-05-28 16:45:32,162] {configuration.py:549} WARNING - section/key [smtp/smtp_user] not found in config
+[2022-05-28 16:45:32,163] {email.py:228} INFO - Email alerting: attempt 1
+[2022-05-28 16:45:32,167] {configuration.py:549} WARNING - section/key [smtp/smtp_user] not found in config
+[2022-05-28 16:45:32,167] {email.py:228} INFO - Email alerting: attempt 1
+[2022-05-28 16:45:32,168] {taskinstance.py:1945} ERROR - Failed to send email to: ['b01201008@gmail.com']
+Traceback (most recent call last):
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1452, in _run_raw_task
+    self._execute_task_with_callbacks(context, test_mode)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1599, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1660, in _execute_task
+    result = execute_callable(context=context)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/decorators/base.py", line 179, in execute
+    return_value = super().execute(context)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/Users/user/flow-for-randy/dags/gamer_dag.py", line 32, in get_lottery
+    gamer_service.get_lotteries()
+  File "/Users/user/flow-for-randy/dags/services/gamer.py", line 74, in get_lotteries
+    self.get_lottery(lottery_page)
+  File "/Users/user/flow-for-randy/dags/services/gamer.py", line 66, in get_lottery
+    self.watch_ad()
+  File "/Users/user/flow-for-randy/dags/services/gamer.py", line 59, in watch_ad
+    self.browser.click(GamerElement.close_button)
+  File "/Users/user/flow-for-randy/dags/services/drivers/selenium_driver.py", line 32, in click
+    self.find_element(el).click()
+  File "/Users/user/flow-for-randy/dags/services/drivers/selenium_driver.py", line 26, in find_element
+    return self.driver.find_element(By.CSS_SELECTOR, el.value)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 1251, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 430, in execute
+    self.error_handler.check_response(response)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/selenium/webdriver/remote/errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: chrome not reachable
+  (Session info: chrome=102.0.5005.61)
+Stacktrace:
+0   chromedriver                        0x0000000107643d19 chromedriver + 5197081
+1   chromedriver                        0x00000001075d1b23 chromedriver + 4729635
+2   chromedriver                        0x00000001071af16f chromedriver + 393583
+3   chromedriver                        0x000000010719cf02 chromedriver + 319234
+4   chromedriver                        0x000000010719d8f2 chromedriver + 321778
+5   chromedriver                        0x000000010719f812 chromedriver + 329746
+6   chromedriver                        0x000000010719816c chromedriver + 299372
+7   chromedriver                        0x00000001071b0712 chromedriver + 399122
+8   chromedriver                        0x000000010721395b chromedriver + 805211
+9   chromedriver                        0x00000001072016f3 chromedriver + 730867
+10  chromedriver                        0x00000001071d7a49 chromedriver + 559689
+11  chromedriver                        0x00000001071d8a75 chromedriver + 563829
+12  chromedriver                        0x0000000107615bdd chromedriver + 5008349
+13  chromedriver                        0x000000010761ab64 chromedriver + 5028708
+14  chromedriver                        0x000000010761fbcf chromedriver + 5049295
+15  chromedriver                        0x000000010761b7ca chromedriver + 5031882
+16  chromedriver                        0x00000001075f559f chromedriver + 4875679
+17  chromedriver                        0x0000000107635388 chromedriver + 5137288
+18  chromedriver                        0x000000010763550f chromedriver + 5137679
+19  chromedriver                        0x000000010764b085 chromedriver + 5226629
+20  libsystem_pthread.dylib             0x00007ff819e344e1 _pthread_start + 125
+21  libsystem_pthread.dylib             0x00007ff819e2ff6b thread_start + 15
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 2329, in email_alert
+    send_email(task.email, subject, html_content)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/utils/email.py", line 58, in send_email
+    return backend(
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/utils/email.py", line 119, in send_email_smtp
+    send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/utils/email.py", line 230, in send_mime_email
+    smtp_conn = _get_smtp_connection(smtp_host, smtp_port, smtp_timeout, smtp_ssl)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/utils/email.py", line 264, in _get_smtp_connection
+    else smtplib.SMTP(host=host, port=port, timeout=timeout)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/smtplib.py", line 255, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/smtplib.py", line 339, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/smtplib.py", line 310, in _get_socket
+    return socket.create_connection((host, port), timeout,
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/socket.py", line 808, in create_connection
+    raise err
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1943, in handle_failure
+    self.email_alert(error, task)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 2331, in email_alert
+    send_email(task.email, subject, html_content_err)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/utils/email.py", line 58, in send_email
+    return backend(
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/utils/email.py", line 119, in send_email_smtp
+    send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/utils/email.py", line 230, in send_mime_email
+    smtp_conn = _get_smtp_connection(smtp_host, smtp_port, smtp_timeout, smtp_ssl)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/site-packages/airflow/utils/email.py", line 264, in _get_smtp_connection
+    else smtplib.SMTP(host=host, port=port, timeout=timeout)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/smtplib.py", line 255, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/smtplib.py", line 339, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/smtplib.py", line 310, in _get_socket
+    return socket.create_connection((host, port), timeout,
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/socket.py", line 808, in create_connection
+    raise err
+  File "/Users/user/.pyenv/versions/3.8.13/lib/python3.8/socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+[2022-05-28 16:45:32,181] {standard_task_runner.py:92} ERROR - Failed to execute job 97 for task get_lottery (Message: chrome not reachable
+  (Session info: chrome=102.0.5005.61)
+Stacktrace:
+0   chromedriver                        0x0000000107643d19 chromedriver + 5197081
+1   chromedriver                        0x00000001075d1b23 chromedriver + 4729635
+2   chromedriver                        0x00000001071af16f chromedriver + 393583
+3   chromedriver                        0x000000010719cf02 chromedriver + 319234
+4   chromedriver                        0x000000010719d8f2 chromedriver + 321778
+5   chromedriver                        0x000000010719f812 chromedriver + 329746
+6   chromedriver                        0x000000010719816c chromedriver + 299372
+7   chromedriver                        0x00000001071b0712 chromedriver + 399122
+8   chromedriver                        0x000000010721395b chromedriver + 805211
+9   chromedriver                        0x00000001072016f3 chromedriver + 730867
+10  chromedriver                        0x00000001071d7a49 chromedriver + 559689
+11  chromedriver                        0x00000001071d8a75 chromedriver + 563829
+12  chromedriver                        0x0000000107615bdd chromedriver + 5008349
+13  chromedriver                        0x000000010761ab64 chromedriver + 5028708
+14  chromedriver                        0x000000010761fbcf chromedriver + 5049295
+15  chromedriver                        0x000000010761b7ca chromedriver + 5031882
+16  chromedriver                        0x00000001075f559f chromedriver + 4875679
+17  chromedriver                        0x0000000107635388 chromedriver + 5137288
+18  chromedriver                        0x000000010763550f chromedriver + 5137679
+19  chromedriver                        0x000000010764b085 chromedriver + 5226629
+20  libsystem_pthread.dylib             0x00007ff819e344e1 _pthread_start + 125
+21  libsystem_pthread.dylib             0x00007ff819e2ff6b thread_start + 15
+; 37623)
+[2022-05-28 16:45:32,223] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-05-28 16:45:32,238] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

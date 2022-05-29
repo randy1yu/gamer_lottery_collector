@@ -1,0 +1,51 @@
+[2022-05-28 16:38:20,546] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: Gamer_Daily_Request.get_lottery manual__2022-05-28T08:38:08.880048+00:00 [queued]>
+[2022-05-28 16:38:20,551] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: Gamer_Daily_Request.get_lottery manual__2022-05-28T08:38:08.880048+00:00 [queued]>
+[2022-05-28 16:38:20,551] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-28 16:38:20,551] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-05-28 16:38:20,551] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-28 16:38:20,560] {taskinstance.py:1378} INFO - Executing <Task(_PythonDecoratedOperator): get_lottery> on 2022-05-28 08:38:08.880048+00:00
+[2022-05-28 16:38:20,562] {standard_task_runner.py:52} INFO - Started process 37103 to run task
+[2022-05-28 16:38:20,566] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'Gamer_Daily_Request', 'get_lottery', 'manual__2022-05-28T08:38:08.880048+00:00', '--job-id', '91', '--raw', '--subdir', 'DAGS_FOLDER/gamer_dag.py', '--cfg-path', '/var/folders/7p/8y53sxp17879s6k6nzygbwgw0000gn/T/tmpi47s9pf1', '--error-file', '/var/folders/7p/8y53sxp17879s6k6nzygbwgw0000gn/T/tmpicxloi3c']
+[2022-05-28 16:38:20,568] {standard_task_runner.py:80} INFO - Job 91: Subtask get_lottery
+[2022-05-28 16:38:20,606] {task_command.py:370} INFO - Running <TaskInstance: Gamer_Daily_Request.get_lottery manual__2022-05-28T08:38:08.880048+00:00 [running]> on host userdeMacBook-Pro.local
+[2022-05-28 16:38:20,646] {taskinstance.py:1570} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=b01201008@gmail.com
+AIRFLOW_CTX_DAG_OWNER=randy
+AIRFLOW_CTX_DAG_ID=Gamer_Daily_Request
+AIRFLOW_CTX_TASK_ID=get_lottery
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-28T08:38:08.880048+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-05-28T08:38:08.880048+00:00
+[2022-05-28 16:38:20,647] {logging_mixin.py:115} INFO - get_lottery
+[2022-05-28 16:38:33,936] {logging_mixin.py:115} INFO - Message: element not interactable
+  (Session info: chrome=102.0.5005.61)
+Stacktrace:
+0   chromedriver                        0x00000001081ebd19 chromedriver + 5197081
+1   chromedriver                        0x0000000108179b23 chromedriver + 4729635
+2   chromedriver                        0x0000000107d5716f chromedriver + 393583
+3   chromedriver                        0x0000000107d8d477 chromedriver + 615543
+4   chromedriver                        0x0000000107d81689 chromedriver + 566921
+5   chromedriver                        0x0000000107da9802 chromedriver + 731138
+6   chromedriver                        0x0000000107d80f45 chromedriver + 565061
+7   chromedriver                        0x0000000107da990e chromedriver + 731406
+8   chromedriver                        0x0000000107dbc2a1 chromedriver + 807585
+9   chromedriver                        0x0000000107da96f3 chromedriver + 730867
+10  chromedriver                        0x0000000107d7fa49 chromedriver + 559689
+11  chromedriver                        0x0000000107d80a75 chromedriver + 563829
+12  chromedriver                        0x00000001081bdbdd chromedriver + 5008349
+13  chromedriver                        0x00000001081c2b64 chromedriver + 5028708
+14  chromedriver                        0x00000001081c7bcf chromedriver + 5049295
+15  chromedriver                        0x00000001081c37ca chromedriver + 5031882
+16  chromedriver                        0x000000010819d59f chromedriver + 4875679
+17  chromedriver                        0x00000001081dd388 chromedriver + 5137288
+18  chromedriver                        0x00000001081dd50f chromedriver + 5137679
+19  chromedriver                        0x00000001081f3085 chromedriver + 5226629
+20  libsystem_pthread.dylib             0x00007ff819e344e1 _pthread_start + 125
+21  libsystem_pthread.dylib             0x00007ff819e2ff6b thread_start + 15
+[2022-05-28 16:38:33,936] {logging_mixin.py:115} INFO - fail to click div.rewardResumebutton
+[2022-05-28 16:39:07,128] {python.py:173} INFO - Done. Returned value was: None
+[2022-05-28 16:39:07,141] {taskinstance.py:1396} INFO - Marking task as SUCCESS. dag_id=Gamer_Daily_Request, task_id=get_lottery, execution_date=20220528T083808, start_date=20220528T083820, end_date=20220528T083907
+[2022-05-28 16:39:07,176] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-05-28 16:39:07,190] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
