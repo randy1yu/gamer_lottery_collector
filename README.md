@@ -8,7 +8,7 @@ running on airflow, using selenium to implement
 - Earn the coin
 - Collect the lotteries
 
-Gamer is a popular forum in Taiwan. It provides prizes including funiture,electronic product, toy and os on.
+[Gamer] is a popular forum in Taiwan. It provides prizes including funiture,electronic product, toy and os on.
 User can get the lottry by spend coin or watch ads.
 Gamer Lottery Collector can help you collect the coins and lotteries automatically.
 
@@ -46,7 +46,10 @@ airflow webserver --port 8080
 airflow scheduler
 ```
 
+## License
+
 **Free Software, Hell Yeah!**
 
+   [Gamer]: <https://www.gamer.com.tw/>
    [Apache Airflow]: <https://airflow.apache.org/>
    [Selenium]: <https://www.selenium.dev/>
