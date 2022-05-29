@@ -29,7 +29,11 @@ pip install -r requirements.txt
 export AIRFLOW_HOME= path of this project
 
 airflow db init
+```
 
+Create airflow services:
+
+```sh
 airflow users create \
     --username admin \
     --firstname Peter \
