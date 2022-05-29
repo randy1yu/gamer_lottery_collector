@@ -8,3 +8,5 @@ conf/config.json
 airflow.db
 airflow-webserver.pid
 
+## logs
+logs/
