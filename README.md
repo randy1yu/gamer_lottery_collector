@@ -6,9 +6,9 @@ Gamer Lottery Collector can help you collect the coins and lotteries automatical
 
 ## Features
 
-- Login to gamer
+- Login to gamer forum
 - Earn the coin
-- Collect the lotteries
+- Collect the lotteries of the prize
 
 ## Tech
 
