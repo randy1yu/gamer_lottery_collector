@@ -11,27 +11,29 @@ from services import CONFIG
 @task(task_id="Login")
 def login(**kwargs):
     browser = SeleniumDriver()
-    gamer_service = GamerScript(browser, CONFIG.get("gamer"))
-    gamer_service.login()
+    gamer_script = GamerScript(browser, CONFIG.get("gamer"))
+    gamer_script.login()
     browser.wait(1)
+
+    # cross-communications
     ti = kwargs['ti']
-    ti.xcom_push("gamer_cookies", gamer_service.browser.get_cookies())
+    ti.xcom_push("gamer_cookies", gamer_script.browser.get_cookies())
 
 
 @task(task_id="Get_lotteries")
 def get_lotteries(**kwargs):
     browser = SeleniumDriver()
     cookies = kwargs['ti'].xcom_pull(task_ids='Login', key="gamer_cookies")
-    gamer_service = GamerScript(browser, CONFIG.get("gamer"), cookies)
-    gamer_service.get_lotteries()
+    gamer_script = GamerScript(browser, CONFIG.get("gamer"), cookies)
+    gamer_script.get_lotteries()
 
 
 @task(task_id="Get_coin")
 def get_coin(**kwargs):
     browser = SeleniumDriver()
     cookies = kwargs['ti'].xcom_pull(task_ids='Login', key="gamer_cookies")
-    gamer_service = GamerScript(browser, CONFIG.get("gamer"), cookies)
-    gamer_service.get_coin()
+    gamer_script = GamerScript(browser, CONFIG.get("gamer"), cookies)
+    gamer_script.get_coin()
 
 
 with DAG(

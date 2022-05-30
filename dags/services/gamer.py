@@ -11,7 +11,7 @@ class GamerElement(ElementEnum):
     username = "input[name='userid']"
     password = "input[name='password']"
     login_button = "a#btn-login"
-    sing_in_button = "a#signin-btn"
+    sign_in_button = "a#signin-btn"
     get_coin_button = "button.popup-dailybox__btn:not([disabled])"
     start_ad_button = "button[type='submit']"
     ad_iframe = "iframe[id*='videorewarded']"
@@ -33,9 +33,9 @@ class GamerScript:
     login_page = "https://user.gamer.com.tw/login.php"
     main_page = "https://www.gamer.com.tw/"
 
-    def __init__(self, browser, gamer_config, cookies=None):
-        self.config = gamer_config
+    def __init__(self, browser: WebDriver, gamer_config: dict, cookies=None):
         self.browser = browser
+        self.config = gamer_config
         self.cookies = cookies
         self.browser.open_browser()
 
@@ -62,7 +62,7 @@ class GamerScript:
     @login_required
     def get_coin(self):
         self.browser.go_to_page(self.main_page)
-        self.browser.click(GamerElement.sing_in_button)
+        self.browser.click(GamerElement.sign_in_button)
         if self.browser.try_click(GamerElement.get_coin_button):
             self._watch_ad()
 
