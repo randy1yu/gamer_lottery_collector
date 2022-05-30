@@ -42,7 +42,7 @@ with DAG(
             'retries': 0,
             'retry_delay': timedelta(minutes=5),
         },
-        description='A dag for finish gamer daily request',
+        description='A dag for finish gamer daily quest',
         schedule_interval=timedelta(days=1),
         start_date=datetime(2022, 1, 1),
         catchup=False,
