@@ -18,13 +18,14 @@ class GamerElement(ElementEnum):
     close_button1 = "img[src*='close-circle']"
     close_button2 = "div.close_button"
     resume_button = "div[class*='rewardDialogueWrapper']:not([style*='display']) div.rewardResumebutton"
+    mute_button = "img[src*='volume_on']"
     lottery_button = "a[class*='c-accent-o']"
     lottery_confirm_radio = "input#agree-confirm"
     lottery_confirm_button = "a[class*='c-primary']"
     submit_button = "button[type='submit']"
 
 
-class GamerService:
+class GamerScript:
     config = {}
     browser: WebDriver = None
     cookies: list = None
@@ -71,6 +72,7 @@ class GamerService:
         self.browser.wait(loading_time)
         self.browser.switch_to(GamerElement.ad_iframe)
         self.browser.try_click(GamerElement.resume_button)
+        self.browser.try_click(GamerElement.mute_button)
         self.browser.wait(ad_time)
         self.browser.try_click(GamerElement.close_button1)
         self.browser.try_click(GamerElement.close_button2)

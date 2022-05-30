@@ -1,2 +1,2 @@
-loading_time = 2
+loading_time = 3
 ad_time = 30
