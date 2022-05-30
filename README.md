@@ -1,7 +1,5 @@
 # Gamer Lottery Collector
 
-running on airflow, using selenium to implement
-
 [Gamer] is a popular forum in Taiwan. It provides prizes including furniture,electronic product, toy and os on.
 User can get the lottery by spend coin or watch ads.
 Gamer Lottery Collector can help you collect the coins and lotteries automatically.
