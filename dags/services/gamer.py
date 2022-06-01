@@ -1,6 +1,6 @@
 import functools
 
-from .constant import loading_time, ad_time
+from .constant import loading_time, ad_time, short_ad_time
 from .drivers.driver import WebDriver, ElementEnum
 
 
@@ -72,9 +72,11 @@ class GamerScript:
         self.browser.click(GamerElement.start_ad_button)
         self.browser.wait(loading_time)
         self.browser.switch_to(GamerElement.ad_iframe)
-        self.browser.try_click(GamerElement.resume_button)
-        self.browser.try_click(GamerElement.mute_button)
-        self.browser.wait(ad_time)
+        if self.browser.try_click(GamerElement.resume_button):  # for short ad
+            self.browser.try_click(GamerElement.mute_button)
+            self.browser.wait(short_ad_time)
+        else:  # normal ad
+            self.browser.wait(ad_time)
         self.browser.try_click(GamerElement.close_button1)
         self.browser.try_click(GamerElement.close_button2)
         self.browser.switch_to(GamerElement.none)
