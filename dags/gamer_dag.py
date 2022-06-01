@@ -3,9 +3,11 @@ from datetime import datetime, timedelta
 from airflow import DAG
 from airflow.decorators import task
 from airflow.operators.empty import EmptyOperator
+
 from services.drivers.selenium_driver import SeleniumDriver
 from services.gamer import GamerScript
 from services import CONFIG
+from services.constant import loading_time
 
 
 @task(task_id="Login")
@@ -13,7 +15,7 @@ def login(**kwargs):
     browser = SeleniumDriver()
     gamer_script = GamerScript(browser, CONFIG.get("gamer"))
     gamer_script.login()
-    browser.wait(1)
+    browser.wait(loading_time)
 
     # cross-communications
     ti = kwargs['ti']
