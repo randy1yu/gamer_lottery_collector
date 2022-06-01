@@ -50,10 +50,6 @@ airflow webserver --port 8080
 airflow scheduler
 ```
 
-## License
-
-**Free Software, Hell Yeah!**
-
    [Gamer]: <https://www.gamer.com.tw/>
    [Apache Airflow]: <https://airflow.apache.org/>
    [Selenium]: <https://www.selenium.dev/>
