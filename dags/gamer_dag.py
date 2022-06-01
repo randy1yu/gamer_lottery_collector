@@ -42,11 +42,10 @@ with DAG(
             'depends_on_past': False,
             'email': ['b01201008@gmail.com'],
             'retries': 0,
-            'retry_delay': timedelta(minutes=5),
         },
         description='A dag for finish gamer daily quest',
-        schedule_interval=timedelta(days=1),
-        start_date=datetime(2022, 1, 1, 4, 0, 0),
+        schedule_interval='0 4 * * *',
+        start_date=datetime(2022, 2, 1),
         catchup=False,
         tags=['gamer'],
 ) as dag:

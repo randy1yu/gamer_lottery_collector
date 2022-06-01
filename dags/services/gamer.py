@@ -30,7 +30,7 @@ class GamerScript:
     config = {}
     browser: WebDriver = None
     cookies: list = None
-    is_login = False
+    is_authenticated = False
     login_page = "https://user.gamer.com.tw/login.php"
     main_page = "https://www.gamer.com.tw/"
 
@@ -41,21 +41,20 @@ class GamerScript:
         self.browser.open_browser()
 
     def login(self):
+        self.browser.go_to_page(self.login_page)
+
         if self.cookies:
-            self.browser.go_to_page(self.login_page)
             self.browser.load_cookies(self.cookies)
-            self.browser.go_to_page(self.main_page)
         else:
-            self.browser.go_to_page(self.login_page)
             self.browser.write_text_into(GamerElement.username, self.config.get("username"))
             self.browser.write_text_into(GamerElement.password, self.config.get("password"))
             self.browser.click(GamerElement.login_button)
-        self.is_login = True
+        self.is_authenticated = True
 
     def login_required(func):
         @functools.wraps(func)
         def wrap(self, *args, **kwargs):
-            if not self.is_login:
+            if not self.is_authenticated:
                 self.login()
             return func(self, *args, **kwargs)
         return wrap
@@ -75,7 +74,7 @@ class GamerScript:
         if self.browser.try_click(GamerElement.resume_button):  # for short ad
             self.browser.try_click(GamerElement.mute_button)
             self.browser.wait(short_ad_time)
-        else:  # normal ad
+        else:  # for normal ad
             self.browser.wait(ad_time)
         self.browser.try_click(GamerElement.close_button1)
         self.browser.try_click(GamerElement.close_button2)
