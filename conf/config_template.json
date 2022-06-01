@@ -2,6 +2,7 @@
   "gamer": {
     "username": "",
     "password": "",
+    "lottery_num": 10,
     "lottery_page": [
       "https://fuli.gamer.com.tw/shop_detail.php?sn=2814"
     ]

@@ -4,6 +4,7 @@ from .constant import loading_time, ad_time
 from .drivers.driver import WebDriver, ElementEnum
 
 
+# Css selector of elements
 class GamerElement(ElementEnum):
     none = None
     login_page = "https://user.gamer.com.tw/login.php"
@@ -89,6 +90,8 @@ class GamerScript:
             self.browser.click(GamerElement.submit_button)
 
     def get_lotteries(self):
+        lottery_num = self.config.get("lottery_num", 10)
         lottery_pages = self.config.get("lottery_page", [])
         for lottery_page in lottery_pages:
-            self.get_lottery(lottery_page)
+            for num in range(lottery_num):
+                self.get_lottery(lottery_page)
