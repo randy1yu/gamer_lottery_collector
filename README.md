@@ -21,6 +21,8 @@ Gamer Lottery Collector uses some open source projects to work properly:
 ## Installation
 prepare environment for python 3.8
 
+install [Chrome Driver] for selenium
+
 ```sh
 pip install -r requirements.txt
 
@@ -55,3 +57,4 @@ airflow scheduler
    [Gamer]: <https://www.gamer.com.tw/>
    [Apache Airflow]: <https://airflow.apache.org/>
    [Selenium]: <https://www.selenium.dev/>
+   [Chrome Driver]: <https://chromedriver.chromium.org/>
