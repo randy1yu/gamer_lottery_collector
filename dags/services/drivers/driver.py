@@ -49,7 +49,7 @@ class WebDriver:
         raise NotImplementedError()
 
     @abstractmethod
-    def switch_to(self, el: ElementEnum):
+    def switch_to_frame(self, el: ElementEnum):
         raise NotImplementedError()
 
     @abstractmethod

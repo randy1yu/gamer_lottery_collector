@@ -40,7 +40,7 @@ class SeleniumDriver(WebDriver):
     def wait(self, seconds):
         time.sleep(seconds)
 
-    def switch_to(self, el: ElementEnum):
+    def switch_to_frame(self, el: ElementEnum):
         if el.value:
             self.driver.switch_to.frame(self.find_element(el))
         else:

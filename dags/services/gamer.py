@@ -70,7 +70,7 @@ class GamerScript:
         self.browser.wait(loading_time)
         self.browser.click(GamerElement.start_ad_button)
         self.browser.wait(loading_time)
-        self.browser.switch_to(GamerElement.ad_iframe)
+        self.browser.switch_to_frame(GamerElement.ad_iframe)
         if self.browser.try_click(GamerElement.resume_button):  # for short ad
             self.browser.try_click(GamerElement.mute_button)
             self.browser.wait(short_ad_time)
@@ -78,7 +78,7 @@ class GamerScript:
             self.browser.wait(ad_time)
         self.browser.try_click(GamerElement.close_button1)
         self.browser.try_click(GamerElement.close_button2)
-        self.browser.switch_to(GamerElement.none)
+        self.browser.switch_to_frame(GamerElement.none)
         self.browser.wait(loading_time)
 
     @login_required
