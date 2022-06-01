@@ -4,10 +4,10 @@ from airflow import DAG
 from airflow.decorators import task
 from airflow.operators.empty import EmptyOperator
 
-from services.drivers.selenium_driver import SeleniumDriver
-from services.gamer import GamerScript
 from services import CONFIG
 from services.constant import loading_time
+from services.drivers.selenium_driver import SeleniumDriver
+from services.gamer import GamerScript
 
 
 @task(task_id="Login")
