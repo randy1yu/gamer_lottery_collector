@@ -46,6 +46,7 @@ class SeleniumDriver(WebDriver):
         else:
             self.driver.switch_to.default_content()
 
+    # todo: using try decorator to implement this function
     def try_click(self, el: ElementEnum) -> bool:
         try:
             self.click(el)
